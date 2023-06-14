@@ -1,6 +1,6 @@
 def call(String hubUser, String project, String version){
     sh """
         docker rmi ${hubUser}/${project}:${version}
-        docker ${hubUser}/${project}:latest
+        docker rmi ${hubUser}/${project}:latest
     """
 }
